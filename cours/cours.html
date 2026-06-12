@@ -1,0 +1,1134 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cours - Diva Danse</title>
+    <link rel="stylesheet" href="cours.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/Images/Logo/Logo_transparent/3.webp"
+    />
+  </head>
+  <body>
+    <!-- header du site, comme sur toutes les pages -->
+    <div class="header-container">
+      <a href="/index.html"
+        ><img
+          class="header-logo"
+          src="/Images/Logo/Logo_transparent/2.webp"
+          alt="Le logo du site"
+      /></a>
+      <button
+        class="hamburger"
+        id="hamburger"
+        aria-label="Menu"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav">
+        <ul>
+          <li><a class="header-link" href="/cours/cours.html">Cours</a></li>
+          <li><a class="header-link" href="/tarifs/tarifs.html">Tarifs</a></li>
+          <li>
+            <a class="header-link" href="/studios/studios.html">Studios</a>
+          </li>
+          <li>
+            <a class="header-link" href="/actualites/actualites.html"
+              >Actualités</a
+            >
+          </li>
+          <li>
+            <a class="header-link" href="/contact/contact.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- ici on met tous les cours avec les profils des profs -->
+    <section class="cours-section">
+      <h2 class="cours-section-title">NOS COURS ET PROFESSEURS</h2>
+
+      <div class="cours-grid">
+        <!-- chaque carte correspond à un cours, un peu comme une mini fiche -->
+        <!-- STREET JAZZ -->
+        <div class="cours-card" onclick="window.location = '#'">
+          <div class="card-style-photo">
+            <img src="/Images/Styles/Styles_card/street-jazz.webp" alt="Photo style Street Jazz" class="card-style-img" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-course-name">STREET JAZZ</h3>
+            <p class="card-age">à partir de 15 ans</p>
+            <div class="card-prof">
+              <a href="" class="prof-link" onclick="event.stopPropagation()">
+                <img
+                  src="/Images/Profs/Profs-profils/Laurence-profil.png"
+                  alt="Photo de Laurence"
+                  class="prof-photo"
+                />
+                <div class="prof-info">
+                  <p class="prof-name">Laurence</p>
+                  <p class="prof-desc">
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua Ut enim ad minim veniam quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo
+                  </p>
+                </div>
+              </a>
+            </div>
+            <a
+              href="#planning"
+              class="card-horaires-link"
+              data-style-target="street-jazz"
+              >Voir les horaires →</a
+            >
+          </div>
+        </div>
+
+        <!-- LYRICAL -->
+        <div class="cours-card" onclick="window.location = '#'">
+          <div class="card-style-photo">
+            <img src="/Images/Styles/Styles_card/lyrical.webp" alt="Photo style Lyrical" class="card-style-img" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-course-name">LYRICAL</h3>
+            <p class="card-age">à partir de 15 ans</p>
+            <div class="card-prof">
+              <a href="" class="prof-link" onclick="event.stopPropagation()">
+                <img
+                  src="/Images/Profs/Profs-profils/Maëva-profil.png"
+                  alt="Photo de Maeva"
+                  class="prof-photo"
+                />
+                <div class="prof-info">
+                  <p class="prof-name">Maeva</p>
+                  <p class="prof-desc">
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua Ut enim ad minim veniam quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo
+                  </p>
+                </div>
+              </a>
+            </div>
+            <a
+              href="#planning"
+              class="card-horaires-link"
+              data-style-target="lyrical"
+              >Voir les horaires →</a
+            >
+          </div>
+        </div>
+
+        <!-- SENSUEL CONTEMPO -->
+        <div class="cours-card" onclick="window.location = '#'">
+          <div class="card-style-photo">
+            <img
+              src="/Images/Styles/Styles_card/sensual-contempo.webp"
+              alt="Photo style Sensuel Contempo"
+              class="card-style-img"
+            />
+          </div>
+          <div class="card-body">
+            <h3 class="card-course-name">SENSUEL CONTEMPO</h3>
+            <p class="card-age">à partir de 16 ans</p>
+            <div class="card-prof">
+              <a href="" class="prof-link" onclick="event.stopPropagation()">
+                <img
+                  src="/Images/Profs/Profs-profils/Maëva-profil.png"
+                  alt="Photo de Maeva"
+                  class="prof-photo"
+                />
+                <div class="prof-info">
+                  <p class="prof-name">Maeva</p>
+                  <p class="prof-desc">
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua Ut enim ad minim veniam quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo
+                  </p>
+                </div>
+              </a>
+            </div>
+            <a
+              href="#planning"
+              class="card-horaires-link"
+              data-style-target="sensual-contempo"
+              >Voir les horaires →</a
+            >
+          </div>
+        </div>
+
+        <!-- HEELS -->
+        <div class="cours-card" onclick="window.location = '#'">
+          <div class="card-style-photo">
+            <img src="/Images/Styles/Styles_card/heels.webp" alt="Photo style Heels" class="card-style-img" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-course-name">HEELS</h3>
+            <p class="card-age">à partir de 18 ans</p>
+            <div class="card-prof">
+              <a href="" class="prof-link" onclick="event.stopPropagation()">
+                <img
+                  src="/Images/Profs/Profs-profils/Magdaléna-profil.png"
+                  alt="Photo de Magdalena"
+                  class="prof-photo"
+                />
+                <div class="prof-info">
+                  <p class="prof-name">Magdalena</p>
+                  <p class="prof-desc">
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua Ut enim ad minim veniam quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo
+                  </p>
+                </div>
+              </a>
+            </div>
+            <a
+              href="#planning"
+              class="card-horaires-link"
+              data-style-target="heels-all-levels"
+              >Voir les horaires →</a
+            >
+          </div>
+        </div>
+
+        <!-- WAACKING -->
+        <div class="cours-card" onclick="window.location = '#'">
+          <div class="card-style-photo">
+            <img src="/Images/Styles/Styles_card/waaking.webp" alt="Photo style Waacking" class="card-style-img" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-course-name">WAACKING</h3>
+            <p class="card-age">à partir de 15 ans</p>
+            <div class="card-prof">
+              <a href="" class="prof-link" onclick="event.stopPropagation()">
+                <img
+                  src="/Images/Profs/Profs-profils/Mister_K-profil.png"
+                  alt="Photo de Mister K"
+                  class="prof-photo"
+                />
+                <div class="prof-info">
+                  <p class="prof-name">Mister K</p>
+                  <p class="prof-desc">
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua Ut enim ad minim veniam quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo
+                  </p>
+                </div>
+              </a>
+            </div>
+            <a
+              href="#planning"
+              class="card-horaires-link"
+              data-style-target="waacking"
+              >Voir les horaires →</a
+            >
+          </div>
+        </div>
+
+        <!-- COMMERCIAL GIRLY -->
+        <div class="cours-card" onclick="window.location = '#'">
+          <div class="card-style-photo">
+            <img
+              src="/Images/Styles/Styles_card/commercial-girly.png"
+              alt="Photo style Commercial Girly"
+              class="card-style-img"
+            />
+          </div>
+          <div class="card-body">
+            <h3 class="card-course-name">COMMERCIAL GIRLY</h3>
+            <p class="card-age">à partir de 15 ans</p>
+            <div class="card-prof">
+              <a href="" class="prof-link" onclick="event.stopPropagation()">
+                <img
+                  src="/Images/Profs/Profs-profils/Mister_K-profil.png"
+                  alt="Photo de Mister K"
+                  class="prof-photo"
+                />
+                <div class="prof-info">
+                  <p class="prof-name">Mister K</p>
+                  <p class="prof-desc">
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua Ut enim ad minim veniam quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo
+                  </p>
+                </div>
+              </a>
+            </div>
+            <a
+              href="#planning"
+              class="card-horaires-link"
+              data-style-target="commercial-girly"
+              >Voir les horaires →</a
+            >
+          </div>
+        </div>
+
+        <!-- DANCE HALL -->
+        <div class="cours-card" onclick="window.location = '#'">
+          <div class="card-style-photo">
+            <img src="/Images/Styles/Styles_card/dancehall-gyal.png" alt="Photo style Dance Hall" class="card-style-img" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-course-name">DANCE HALL </h3>
+            <p class="card-age">à partir de 15 ans</p>
+            <div class="card-prof">
+              <a href="" class="prof-link" onclick="event.stopPropagation()">
+                <img
+                  src="/Images/Profs/Profs-profils/Redlysa-profil.png"
+                  alt="Photo de Redlysa"
+                  class="prof-photo"
+                />
+                <div class="prof-info">
+                  <p class="prof-name">Redlysa</p>
+                  <p class="prof-desc">
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua Ut enim ad minim veniam quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo
+                  </p>
+                </div>
+              </a>
+            </div>
+            <a
+              href="#planning"
+              class="card-horaires-link"
+              data-style-target="dancehall-gyal"
+              >Voir les horaires →</a
+            >
+          </div>
+        </div>
+
+        <!-- FLOOR WORK -->
+        <div class="cours-card" onclick="window.location = '#'">
+          <div class="card-style-photo">
+            <img src="/Images/Styles/Styles_card/floorwork.webp" alt="Photo style Floor Work" class="card-style-img" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-course-name">FLOOR WORK</h3>
+            <p class="card-age">à partir de 18 ans</p>
+            <div class="card-prof">
+              <a href="" class="prof-link" onclick="event.stopPropagation()">
+                <img
+                  src="/Images/Profs/Profs-profils/Noha-profil.png"
+                  alt="Photo de Noha"
+                  class="prof-photo"
+                />
+                <div class="prof-info">
+                  <p class="prof-name">Noha</p>
+                  <p class="prof-desc">
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua Ut enim ad minim veniam quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo
+                  </p>
+                </div>
+              </a>
+            </div>
+            <a
+              href="#planning"
+              class="card-horaires-link"
+              data-style-target="floorwork-heels"
+              >Voir les horaires →</a
+            >
+          </div>
+        </div>
+
+        <!-- REGGAETON -->
+        <div class="cours-card" onclick="window.location = '#'">
+          <div class="card-style-photo">
+            <img src="/Images/Styles/Styles_card/reggeaton.webp" alt="Photo style Reggaeton" class="card-style-img" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-course-name">REGGAETON</h3>
+            <p class="card-age">à partir de 16 ans</p>
+            <div class="card-prof">
+              <a href="" class="prof-link" onclick="event.stopPropagation()">
+                <img
+                  src="/Images/Profs/Profs-profils/Redlysa-profil.png"
+                  alt="Photo de Redlysa"
+                  class="prof-photo"
+                />
+                <div class="prof-info">
+                  <p class="prof-name">Redlysa</p>
+                  <p class="prof-desc">
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua Ut enim ad minim veniam quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo
+                  </p>
+                </div>
+              </a>
+            </div>
+            <a
+              href="#planning"
+              class="card-horaires-link"
+              data-style-target="reggaeton"
+              >Voir les horaires →</a
+            >
+          </div>
+        </div>
+
+        <!-- TWERK -->
+        <div class="cours-card" onclick="window.location = '#'">
+          <div class="card-style-photo">
+            <img src="/Images/Styles/Styles_card/twerk.webp" alt="Photo style Twerk" class="card-style-img" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-course-name">TWERK</h3>
+            <p class="card-age">à partir de 18 ans</p>
+            <div class="card-prof">
+              <a href="" class="prof-link" onclick="event.stopPropagation()">
+                <img
+                  src="/Images/Profs/Profs-profils/Noha-profil.png"
+                  alt="Photo de Noha"
+                  class="prof-photo"
+                />
+                <div class="prof-info">
+                  <p class="prof-name">Noha</p>
+                  <p class="prof-desc">
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua Ut enim ad minim veniam quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo
+                  </p>
+                </div>
+              </a>
+            </div>
+            <a
+              href="#planning"
+              class="card-horaires-link"
+              data-style-target="twerk"
+              >Voir les horaires →</a
+            >
+          </div>
+        </div>
+
+        <!-- MODERN JAZZ -->
+        <div class="cours-card" onclick="window.location = '#'">
+          <div class="card-style-photo">
+            <img src="/Images/Styles/Styles_card/modern-jazz.webp" alt="Photo style Modern Jazz" class="card-style-img" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-course-name">MODERN JAZZ</h3>
+            <p class="card-age">à partir de 15 ans</p>
+            <div class="card-prof">
+              <a href="" class="prof-link" onclick="event.stopPropagation()">
+                <img
+                  src="/Images/Profs/Profs-profils/Laurence-profil.png"
+                  alt="Photo de Laurence"
+                  class="prof-photo"
+                />
+                <div class="prof-info">
+                  <p class="prof-name">Laurence</p>
+                  <p class="prof-desc">
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua Ut enim ad minim veniam quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo
+                  </p>
+                </div>
+              </a>
+            </div>
+            <a
+              href="#planning"
+              class="card-horaires-link"
+              data-style-target="modern-jazz"
+              >Voir les horaires →</a
+            >
+          </div>
+        </div>
+
+        <!-- BROADWAY JAZZ -->
+        <div class="cours-card" onclick="window.location = '#'">
+          <div class="card-style-photo">
+            <img
+              src="/Images/Styles/Styles_card/broadway-jazz.png"
+              alt="Photo style Broadway Jazz"
+              class="card-style-img"
+            />
+          </div>
+          <div class="card-body">
+            <h3 class="card-course-name">BROADWAY JAZZ</h3>
+            <p class="card-age">à partir de 15 ans</p>
+            <div class="card-prof">
+              <a href="" class="prof-link" onclick="event.stopPropagation()">
+                <img
+                  src="/Images/Profs/Profs-profils/Laurence-profil.png"
+                  alt="Photo de Laurence"
+                  class="prof-photo"
+                />
+                <div class="prof-info">
+                  <p class="prof-name">Laurence</p>
+                  <p class="prof-desc">
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua Ut enim ad minim veniam quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo
+                  </p>
+                </div>
+              </a>
+            </div>
+            <a
+              href="#planning"
+              class="card-horaires-link"
+              data-style-target="broadway-jazz"
+              >Voir les horaires →</a
+            >
+          </div>
+        </div>
+
+        <!-- JAZZ SENSUEL -->
+        <div class="cours-card" onclick="window.location = '#'">
+          <div class="card-style-photo">
+            <img src="/Images/Styles/Styles_card/jazz-sensuel.webp" alt="Photo style Jazz Sensuel" class="card-style-img" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-course-name">JAZZ SENSUEL</h3>
+            <p class="card-age">à partir de 18 ans</p>
+            <div class="card-prof">
+              <a href="" class="prof-link" onclick="event.stopPropagation()">
+                <img
+                  src="/Images/Profs/Profs-profils/Aurore-profil.png"
+                  alt="Photo de Aurore"
+                  class="prof-photo"
+                />
+                <div class="prof-info">
+                  <p class="prof-name">Aurore</p>
+                  <p class="prof-desc">
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua Ut enim ad minim veniam quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo
+                  </p>
+                </div>
+              </a>
+            </div>
+            <a
+              href="#planning"
+              class="card-horaires-link"
+              data-style-target="jazz-sensuel"
+              >Voir les horaires →</a
+            >
+          </div>
+        </div>
+
+        <!-- HEELS CABARET -->
+        <div class="cours-card" onclick="window.location = '#'">
+          <div class="card-style-photo">
+            <img
+              src="/Images/Styles/Styles_card/heels.webp"
+              alt="Photo style Heels Cabaret"
+              class="card-style-img"
+            />
+          </div>
+          <div class="card-body">
+            <h3 class="card-course-name">HEELS CABARET</h3>
+            <p class="card-age">à partir de 18 ans</p>
+            <div class="card-prof">
+              <a href="" class="prof-link" onclick="event.stopPropagation()">
+                <img
+                  src="/Images/Profs/Profs-profils/Aurore-profil.png"
+                  alt="Photo de Aurore"
+                  class="prof-photo"
+                />
+                <div class="prof-info">
+                  <p class="prof-name">Aurore</p>
+                  <p class="prof-desc">
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua Ut enim ad minim veniam quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo
+                  </p>
+                </div>
+              </a>
+            </div>
+            <a
+              href="#planning"
+              class="card-horaires-link"
+              data-style-target="heels-cabaret"
+              >Voir les horaires →</a
+            >
+          </div>
+        </div>
+
+        <!-- HEELS ESCARPINS -->
+        <div class="cours-card" onclick="window.location = '#'">
+          <div class="card-style-photo">
+            <img
+              src="/Images/Styles/Styles_card/heels.webp"
+              alt="Photo style Heels Escarpins"
+              class="card-style-img"
+            />
+          </div>
+          <div class="card-body">
+            <h3 class="card-course-name">HEELS ESCARPINS</h3>
+            <p class="card-age">à partir de 18 ans</p>
+            <div class="card-prof">
+              <a href="" class="prof-link" onclick="event.stopPropagation()">
+                <img
+                  src="/Images/Profs/Profs-profils/Aurore-profil.png"
+                  alt="Photo de Aurore"
+                  class="prof-photo"
+                />
+                <div class="prof-info">
+                  <p class="prof-name">Aurore</p>
+                  <p class="prof-desc">
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua Ut enim ad minim veniam quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo
+                  </p>
+                </div>
+              </a>
+            </div>
+            <a
+              href="#planning"
+              class="card-horaires-link"
+              data-style-target="heels-escarpins"
+              >Voir les horaires →</a
+            >
+          </div>
+        </div>
+
+        <!-- COMMERCIAL -->
+        <div class="cours-card" onclick="window.location = '#'">
+          <div class="card-style-photo">
+            <img src="/Images/Styles/Styles_card/commercial.png" alt="Photo style Commercial" class="card-style-img" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-course-name">COMMERCIAL</h3>
+            <p class="card-age">à partir de 18 ans</p>
+            <div class="card-prof">
+              <a href="" class="prof-link" onclick="event.stopPropagation()">
+                <img
+                  src="/Images/Profs/Profs-profils/Thom-profil.png"
+                  alt="Photo de Thom"
+                  class="prof-photo"
+                />
+                <div class="prof-info">
+                  <p class="prof-name">Thom</p>
+                  <p class="prof-desc">
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua Ut enim ad minim veniam quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo
+                  </p>
+                </div>
+              </a>
+            </div>
+            <a
+              href="#planning"
+              class="card-horaires-link"
+              data-style-target="commercial"
+              >Voir les horaires →</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-separator" />
+
+    <!-- Section Planning -->
+    <section class="planning-section" id="planning">
+      <h2 class="planning-title">PLANNING 2026-2027</h2>
+
+      <!-- Filtres -->
+      <div class="planning-filters">
+        <div class="filter-group">
+          <label for="filter-prof" class="filter-label"
+            >Filtrer par professeur</label
+          >
+          <select id="filter-prof" class="filter-select">
+            <option value="all">Tous les professeurs</option>
+            <option value="noha">Noha</option>
+            <option value="maeva">Maeva</option>
+            <option value="magdalena">Magdalena</option>
+            <option value="mister-k">Mister K</option>
+            <option value="redlysa">Redlysa</option>
+            <option value="aurore">Aurore</option>
+            <option value="laurence">Laurence</option>
+            <option value="thom">Thom</option>
+            <option value="3-profs">3 Profs</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="filter-style" class="filter-label"
+            >Filtrer par style</label
+          >
+          <select id="filter-style" class="filter-select">
+            <option value="all">Tous les styles</option>
+            <option value="heels-all-levels">Heels tous niveaux</option>
+            <option value="floorwork-heels">Floorwork heels</option>
+            <option value="twerk">Twerk</option>
+            <option value="lyrical">Lyrical</option>
+            <option value="commercial">Commercial</option>
+            <option value="sensual-contempo">Sensual contempo</option>
+            <option value="waacking">Waacking</option>
+            <option value="commercial-girly">Commercial girly</option>
+            <option value="reggaeton">Reggaeton</option>
+            <option value="dancehall-gyal">Dancehall gyal</option>
+            <option value="heels-cabaret">Heels cabaret</option>
+            <option value="heels-escarpins">Heels escarpins</option>
+            <option value="jazz-sensuel">Jazz sensuel</option>
+            <option value="modern-jazz">Modern jazz deb/inter</option>
+            <option value="broadway-jazz">Broadway jazz</option>
+            <option value="street-jazz">Street jazz</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Tableau Planning -->
+      <div class="planning-table-wrapper">
+        <table class="planning-table" id="planning-table">
+          <thead>
+            <tr>
+              <th class="day-header" colspan="2">Lundi</th>
+              <th class="day-header" colspan="2">Mardi</th>
+              <th class="day-header" colspan="2">Mercredi</th>
+              <th class="day-header" colspan="2">Jeudi</th>
+              <th class="day-header" colspan="2">Vendredi</th>
+            </tr>
+            <tr>
+              <th class="studio-header">Studio 1</th>
+              <th class="studio-header">Studio 2</th>
+              <th class="studio-header">Studio 1</th>
+              <th class="studio-header">Studio 2</th>
+              <th class="studio-header">Studio 1</th>
+              <th class="studio-header">Studio 2</th>
+              <th class="studio-header">Studio 1</th>
+              <th class="studio-header">Studio 2</th>
+              <th class="studio-header">Studio 1</th>
+              <th class="studio-header">Studio 2</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Créneau 1 : 18h15-19h30 -->
+            <tr>
+              <!-- Lundi S1 -->
+              <td
+                class="planning-cell"
+                data-prof="noha"
+                data-style="floorwork-heels"
+              >
+                <div class="cell-content">
+                  <span class="cell-course">Floorwork heels</span>
+                  <span class="cell-time">18h15-19h30</span>
+                  <span class="cell-prof">NOHA</span>
+                </div>
+              </td>
+              <!-- Lundi S2 -->
+              <td
+                class="planning-cell"
+                data-prof="maeva"
+                data-style="heels-initiation"
+              >
+                <div class="cell-content">
+                  <span class="cell-course">Heels Initiation</span>
+                  <span class="cell-time">18h15-19h30</span>
+                  <span class="cell-prof">MAEVA</span>
+                </div>
+              </td>
+              <!-- Mardi S1 -->
+              <td
+                class="planning-cell"
+                data-prof="maeva"
+                data-style="heels-initiation-deb"
+              >
+                <div class="cell-content">
+                  <span class="cell-course">Heels initiation deb</span>
+                  <span class="cell-time">18h15-19h30</span>
+                  <span class="cell-prof">MAEVA</span>
+                </div>
+              </td>
+              <!-- Mardi S2 -->
+              <td class="planning-cell empty"></td>
+              <!-- Mercredi S1 -->
+              <td
+                class="planning-cell"
+                data-prof="3-profs"
+                data-style="heels-technique"
+              >
+                <div class="cell-content">
+                  <span class="cell-course">Heels technique</span>
+                  <span class="cell-time">18h30-19h30</span>
+                  <span class="cell-prof">3 PROFS</span>
+                </div>
+              </td>
+              <!-- Mercredi S2 -->
+              <td
+                class="planning-cell"
+                data-prof="mister-k"
+                data-style="waacking"
+              >
+                <div class="cell-content">
+                  <span class="cell-course">Waacking</span>
+                  <span class="cell-time">18h15-19h30</span>
+                  <span class="cell-prof">MISTER K</span>
+                </div>
+              </td>
+              <!-- Jeudi S1 -->
+              <td class="planning-cell empty"></td>
+              <!-- Jeudi S2 -->
+              <td
+                class="planning-cell"
+                data-prof="aurore"
+                data-style="heels-cabaret"
+              >
+                <div class="cell-content">
+                  <span class="cell-course">Heels cabaret</span>
+                  <span class="cell-time">18h15-19h30</span>
+                  <span class="cell-prof">AURORE</span>
+                </div>
+              </td>
+              <!-- Vendredi S1 -->
+              <td
+                class="planning-cell"
+                data-prof="laurence"
+                data-style="modern-jazz"
+              >
+                <div class="cell-content">
+                  <span class="cell-course">Modern jazz deb/inter</span>
+                  <span class="cell-time">18h15-19h30</span>
+                  <span class="cell-prof">LAURENCE</span>
+                </div>
+              </td>
+              <!-- Vendredi S2 -->
+              <td class="planning-cell empty"></td>
+            </tr>
+
+            <!-- Créneau 2 : 19h30-20h45 -->
+            <tr>
+              <!-- Lundi S1 -->
+              <td class="planning-cell" data-prof="noha" data-style="twerk">
+                <div class="cell-content">
+                  <span class="cell-course">Twerk</span>
+                  <span class="cell-time">19h30-20h45</span>
+                  <span class="cell-prof">NOHA</span>
+                </div>
+              </td>
+              <!-- Lundi S2 -->
+              <td class="planning-cell" data-prof="maeva" data-style="lyrical">
+                <div class="cell-content">
+                  <span class="cell-course">Lyrical</span>
+                  <span class="cell-time">19h30-20h45</span>
+                  <span class="cell-prof">MAEVA</span>
+                </div>
+              </td>
+              <!-- Mardi S1 -->
+              <td
+                class="planning-cell"
+                data-prof="maeva"
+                data-style="heels-debutant"
+              >
+                <div class="cell-content">
+                  <span class="cell-course">Heels débutant</span>
+                  <span class="cell-time">19h30-20h45</span>
+                  <span class="cell-prof">MAEVA</span>
+                </div>
+              </td>
+              <!-- Mardi S2 -->
+              <td
+                class="planning-cell"
+                data-prof="magdalena"
+                data-style="heels-deb-inter"
+              >
+                <div class="cell-content">
+                  <span class="cell-course">Heels deb/inter</span>
+                  <span class="cell-time">19h30-20h45</span>
+                  <span class="cell-prof">MAGDALENA</span>
+                </div>
+              </td>
+              <!-- Mercredi S1 -->
+              <td
+                class="planning-cell"
+                data-prof="magdalena"
+                data-style="heels-inter-avance"
+              >
+                <div class="cell-content">
+                  <span class="cell-course">Heels inter/avancé</span>
+                  <span class="cell-time">19h30-20h45</span>
+                  <span class="cell-prof">MAGDALENA</span>
+                </div>
+              </td>
+              <!-- Mercredi S2 -->
+              <td
+                class="planning-cell"
+                data-prof="mister-k"
+                data-style="commercial-girly"
+              >
+                <div class="cell-content">
+                  <span class="cell-course">Commercial girly niveau 1</span>
+                  <span class="cell-time">19h30-20h45</span>
+                  <span class="cell-prof">MISTER K</span>
+                </div>
+              </td>
+              <!-- Jeudi S1 -->
+              <td
+                class="planning-cell"
+                data-prof="redlysa"
+                data-style="reggaeton"
+              >
+                <div class="cell-content">
+                  <span class="cell-course">Reggaeton</span>
+                  <span class="cell-time">19h30-20h45</span>
+                  <span class="cell-prof">REDLYSA</span>
+                </div>
+              </td>
+              <!-- Jeudi S2 -->
+              <td
+                class="planning-cell"
+                data-prof="aurore"
+                data-style="heels-escarpins"
+              >
+                <div class="cell-content">
+                  <span class="cell-course">Heels escarpins</span>
+                  <span class="cell-time">19h30-20h45</span>
+                  <span class="cell-prof">AURORE</span>
+                </div>
+              </td>
+              <!-- Vendredi S1 -->
+              <td
+                class="planning-cell"
+                data-prof="laurence"
+                data-style="broadway-jazz"
+              >
+                <div class="cell-content">
+                  <span class="cell-course">Broadway jazz</span>
+                  <span class="cell-time">19h30-20h45</span>
+                  <span class="cell-prof">LAURENCE</span>
+                </div>
+              </td>
+              <!-- Vendredi S2 -->
+              <td class="planning-cell empty"></td>
+            </tr>
+
+            <!-- Créneau 3 : 20h45-22h -->
+            <tr>
+              <!-- Lundi S1 -->
+              <td
+                class="planning-cell"
+                data-prof="thom"
+                data-style="commercial"
+              >
+                <div class="cell-content">
+                  <span class="cell-course">Commercial</span>
+                  <span class="cell-time">20h45-22h</span>
+                  <span class="cell-prof">THOM</span>
+                </div>
+              </td>
+              <!-- Lundi S2 -->
+              <td
+                class="planning-cell"
+                data-prof="maeva"
+                data-style="sensual-contempo"
+              >
+                <div class="cell-content">
+                  <span class="cell-course">Sensual contempo niveau 2</span>
+                  <span class="cell-time">20h45-22h</span>
+                  <span class="cell-prof">MAEVA</span>
+                </div>
+              </td>
+              <!-- Mardi S1 -->
+              <td
+                class="planning-cell"
+                data-prof="maeva"
+                data-style="sensual-contempo"
+              >
+                <div class="cell-content">
+                  <span class="cell-course">Sensual contempo niveau 1</span>
+                  <span class="cell-time">20h45-22h</span>
+                  <span class="cell-prof">MAEVA</span>
+                </div>
+              </td>
+              <!-- Mardi S2 -->
+              <td
+                class="planning-cell"
+                data-prof="magdalena"
+                data-style="heels-inter"
+              >
+                <div class="cell-content">
+                  <span class="cell-course">Heels inter</span>
+                  <span class="cell-time">20h45-22h</span>
+                  <span class="cell-prof">MAGDALENA</span>
+                </div>
+              </td>
+              <!-- Mercredi S1 -->
+              <td class="planning-cell empty"></td>
+              <!-- Mercredi S2 -->
+              <td
+                class="planning-cell"
+                data-prof="mister-k"
+                data-style="commercial-girly"
+              >
+                <div class="cell-content">
+                  <span class="cell-course">Commercial girly niveau 2</span>
+                  <span class="cell-time">20h45-22h</span>
+                  <span class="cell-prof">MISTER K</span>
+                </div>
+              </td>
+              <!-- Jeudi S1 -->
+              <td
+                class="planning-cell"
+                data-prof="redlysa"
+                data-style="dancehall-gyal"
+              >
+                <div class="cell-content">
+                  <span class="cell-course">Dancehall gyal</span>
+                  <span class="cell-time">20h45-22h</span>
+                  <span class="cell-prof">REDLYSA</span>
+                </div>
+              </td>
+              <!-- Jeudi S2 -->
+              <td
+                class="planning-cell"
+                data-prof="aurore"
+                data-style="jazz-sensuel"
+              >
+                <div class="cell-content">
+                  <span class="cell-course">Jazz sensuel</span>
+                  <span class="cell-time">20h45-22h</span>
+                  <span class="cell-prof">AURORE</span>
+                </div>
+              </td>
+              <!-- Vendredi S1 -->
+              <td
+                class="planning-cell"
+                data-prof="laurence"
+                data-style="street-jazz"
+              >
+                <div class="cell-content">
+                  <span class="cell-course">Street jazz</span>
+                  <span class="cell-time">20h45-22h</span>
+                  <span class="cell-prof">LAURENCE</span>
+                </div>
+              </td>
+              <!-- Vendredi S2 -->
+              <td class="planning-cell empty"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="footer-container">
+      <div class="section-reseaux">
+        <ul class="reseaux-list">
+          <li id="instagram">
+            <a href="https://instagram.com/divadanse/" target="_blank"
+              ><img
+                src="/Images/Réseaux/logo-instagram.webp"
+                alt="Logo Instagram"
+                class="logo-reseaux"
+                id="img-instagram"
+            /></a>
+          </li>
+          <li id="tiktok">
+            <a
+              href="https://tiktok.com/@diva.danse34?_t=ZN-8zrYoWRZosY&_r=1"
+              target="_blank"
+              ><img
+                src="/Images/Réseaux/logo-tiktok.webp"
+                alt="Logo TikTok"
+                class="logo-reseaux"
+                id="img-tiktok"
+            /></a>
+          </li>
+          <li id="linkedin">
+            <a href="https://linkedin.com/in/divadanse" target="_blank"
+              ><img
+                src="/Images/Réseaux/logo-linkedin.webp"
+                alt="Logo LinkedIn"
+                class="logo-reseaux"
+                id="img-linkedin"
+            /></a>
+          </li>
+        </ul>
+        <button class="newsletter-btn">
+          <a
+            href="https://ec51f17d.sibforms.com/serve/MUIFALT0dpeK_U7rES9x97Krw9gs_B04-rxxrAv7Zs50SXUx744XlSQyld7cQe9AZYWAxtF0JgGzyrquSonHEAJiJgY5aNLscvVBSMFkzSHc3P2eALm1N-QTW1NgzM5lHPvYuecQe3AuwQp61LCbIW5bYTwhcSym8ARrTel_AnjR22HkoxctOTWOjXz2WWdAQw5YqToNmCjdreZCRA== "
+            target="_blank"
+            >S'inscrire à notre newsletter</a
+          >
+        </button>
+      </div>
+
+      <div class="section-adresses">
+        <a href="mailto:ecoledivadanse@gmail.com" class="adresse-link"
+          ><h3 class="adresse-mail-diva">ecoledivadanse@gmail.com</h3></a
+        >
+        <h3 class="adresse-physique">
+          Diva Danse 137 rue Claude Balbastre Montpellier
+        </h3>
+      </div>
+
+      <div class="logo-section">
+        <img
+          class="footer-logo"
+          src="/Images/Logo/Logo_transparent/4.png"
+          alt="Logo du site"
+        />
+      </div>
+    </div>
+
+    <!-- Modale Profil Professeur -->
+    <div id="prof-modal" class="modal-overlay">
+      <div class="modal-content">
+        <button class="modal-close" id="modal-close">✕</button>
+        <div class="modal-body">
+          <div class="modal-photo-side">
+            <div class="modal-prof-photo-container">
+              <img src="" alt="" id="modal-prof-img" class="modal-prof-img" />
+              <div
+                class="modal-prof-name-overlay"
+                id="modal-prof-name-img"
+              ></div>
+            </div>
+          </div>
+          <div class="modal-info-side">
+            <div class="modal-prof-name-header">
+              <h2 id="modal-prof-name"></h2>
+            </div>
+            <div class="modal-styles-tags" id="modal-styles-tags">
+              <!-- Tags générés dynamiquement -->
+            </div>
+            <div class="modal-bio-section">
+              <h3>BIOGRAPHIE:</h3>
+              <p id="modal-prof-bio"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modale Description Style -->
+    <div id="style-modal" class="modal-overlay">
+      <div class="modal-content style-modal-content">
+        <button class="modal-close" id="style-modal-close">✕</button>
+        <div class="style-modal-body">
+          <div class="style-modal-photo">
+            <img src="" alt="" id="modal-style-img" />
+          </div>
+          <div class="style-modal-info">
+            <div class="style-modal-title-wrapper">
+              <h2 id="modal-style-name"></h2>
+            </div>
+            <div class="style-modal-desc">
+              <p id="modal-style-desc"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="cours.js"></script>
+  </body>
+</html>

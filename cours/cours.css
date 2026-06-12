@@ -1,0 +1,930 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =====================
+   POLICES
+   ===================== */
+@font-face {
+  font-family: "GuthenBloots";
+  src: url("../Fonts/guthen_bloots/Guthen Bloots Personal Use.ttf")
+    format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Vogue";
+  src: url("../Fonts/vogue/Vogue.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* =====================
+   HEADER
+   ===================== */
+/* header du site, avec le logo et le menu */
+.header-container {
+  background-color: #841212;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  font-family: "Vogue", sans-serif;
+  color: white;
+  text-decoration: none;
+  margin-right: 30px;
+  gap: 20px;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+  margin: 0 20px;
+}
+
+.header-link {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.header-logo {
+  height: 100px;
+  margin-right: 0;
+}
+
+/* =====================
+   HAMBURGER MENU
+   ===================== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 1001;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* =====================
+   SECTION COURS
+   ===================== */
+/* section principale où les cartes des cours sont affichées */
+.cours-section {
+  background-color: black;
+  padding: 50px 40px 70px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.cours-section-title {
+  text-align: center;
+  font-family: "Vogue", sans-serif;
+  font-weight: 100;
+  font-size: 36px;
+  letter-spacing: 2px;
+  color: white;
+  margin-bottom: 70px;
+}
+
+/* =====================
+   GRILLE 4 COLONNES
+   ===================== */
+/* grille qui organise toutes les cartes de cours */
+.cours-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* =====================
+   CARD
+   ===================== */
+/* chaque carte de cours a son propre petit bloc */
+.cours-card {
+  background-color: #c8c8c8;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  /* Ombre légère comme sur la maquette */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.cours-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+}
+
+/* =====================
+   ZONE PHOTO DU STYLE (haut de card)
+   ===================== */
+.card-style-photo {
+  width: 100%;
+  /* Hauteur fixe correspondant à la maquette (~45% de la card) */
+  height: 150px;
+  background-color: #a8a8a8;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Pas de border-radius en bas pour fusionner avec le body */
+  border-radius: 14px 14px 0 0;
+}
+
+/* Texte placeholder "Photo du style" visible si pas d'image */
+.card-style-photo::after {
+  content: "Photo du style";
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #666;
+  position: absolute;
+  pointer-events: none;
+}
+
+.card-style-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Cacher le texte placeholder si l'image est chargée */
+  position: relative;
+  z-index: 1;
+}
+
+/* =====================
+   CORPS DE LA CARD
+   ===================== */
+/* corps de la carte avec le nom du cours et les infos du prof */
+.card-body {
+  /* Même couleur grise que la card, sans séparation visible */
+  background-color: white;
+  padding: 12px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  flex: 1;
+}
+
+/* Nom du cours */
+.card-course-name {
+  font-family: "Vogue", sans-serif;
+  font-weight: 100;
+  align-self: center;
+  font-size: 18px;
+  color: black;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+  margin-top: 6px;
+}
+
+/* Âge */
+.card-age {
+  font-family: "times new roman", serif;
+  font-weight: 500;
+  font-size: 14px;
+  align-self: center;
+  color: #11111180;
+  margin-bottom: 10px;
+}
+
+/* =====================
+   BLOC PROFESSEUR
+   ===================== */
+.card-prof {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+/* Photo ronde du prof */
+.prof-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  background-color: white;
+  border: 2px solid #841212;
+}
+
+/* Infos texte du prof */
+.prof-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+/* Nom du prof */
+.prof-name {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.2;
+}
+
+.prof-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  width: 100%;
+}
+
+.prof-link:hover .prof-desc {
+  text-decoration: underline;
+  color: #111;
+}
+
+/* Description du prof — SEUL élément cliquable dans le bloc prof */
+.prof-desc {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  color: #333;
+  line-height: 1.4;
+  /* Tronquer à 2 lignes comme sur la maquette */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* =====================
+   LIEN HORAIRES (bas de card)
+   ===================== */
+.card-horaires-link {
+  display: block;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: black;
+  margin-top: auto;
+  padding-top: 4px;
+}
+
+.cours-card:hover .card-horaires-link {
+  text-decoration: underline;
+}
+
+/* =====================
+   RESPONSIVE
+   ===================== */
+@media (max-width: 1100px) {
+  .cours-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .cours-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .cours-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cours-section {
+    padding: 30px 16px 50px;
+  }
+}
+
+.section-separator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 1px;
+}
+
+/* =====================
+   SECTION PLANNING
+   ===================== */
+.planning-section {
+  background-color: black;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.planning-title {
+  font-family: "Vogue", sans-serif;
+  font-size: 32px;
+  color: white;
+  margin-bottom: 50px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+/* Filtres */
+.planning-filters {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.filter-label {
+  font-family: "times new roman", serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.filter-select {
+  padding: 12px 40px 12px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 50px;
+  background-color: #841212;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  min-width: 200px;
+  text-align: center;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  background-size: 12px auto;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.filter-select:hover {
+  background-color: #9c1515;
+}
+
+/* Tableau Planning */
+.planning-table-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  overflow-x: auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.planning-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1000px;
+}
+
+.planning-table th,
+.planning-table td {
+  border: 2px solid #ddd;
+  padding: 15px;
+  text-align: center;
+}
+
+.day-header {
+  background-color: #841212;
+  color: white;
+  font-family: "Vogue", sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  padding: 15px;
+  text-transform: uppercase;
+}
+
+.studio-header {
+  background-color: #222;
+  color: white;
+  font-family: "Vogue", sans-serif;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.planning-cell {
+  height: 120px;
+  vertical-align: middle;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.planning-cell.empty {
+  background-color: #f9f9f9;
+}
+
+/* Style pour les cellules filtrées — rendu "désactivé" */
+.planning-cell.filtered {
+  opacity: 0.15;
+  background-color: #fff;
+  transition: opacity 0.4s ease;
+}
+
+.planning-cell:not(.filtered) {
+  opacity: 1;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.cell-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.cell-course {
+  font-family: "times new roman", serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.planning-cell:not(.filtered) .cell-course {
+  font-weight: 800;
+}
+
+.cell-time {
+  font-size: 12px;
+  color: #666;
+}
+
+.cell-prof {
+  font-family: "Vogue", sans-serif;
+  letter-spacing: 1px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #841212;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.planning-cell:not(.filtered) .cell-prof {
+  font-weight: 900;
+}
+
+/* Responsive planning */
+@media (max-width: 768px) {
+  .planning-section {
+    padding: 50px 15px;
+  }
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 200px;
+  padding: 50px;
+}
+
+.reseaux-list {
+  display: flex;
+  gap: 20px;
+}
+
+.logo-reseaux {
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+}
+
+#tiktok {
+  background-color: black;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  padding-top: 5px;
+  margin: 0;
+}
+
+#img-tiktok {
+  height: 100px;
+  width: 100px;
+}
+
+#instagram {
+  background-color: #e1306c;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  padding-top: 5px;
+  margin: 0;
+}
+
+#linkedin {
+  background-color: #0077b5;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.newsletter-btn {
+  background-color: #841212;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+  color: white;
+  border: none;
+  padding: 20px 30px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50px;
+  margin-top: 30px;
+}
+
+.section-adresses {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.adresse-link {
+  text-decoration: none;
+  color: black;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo {
+  height: 200px;
+}
+
+/* =====================
+   MODALE PROFIL PROF
+   ===================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: none; /* Caché par défaut */
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  backdrop-filter: blur(5px);
+  padding: 20px;
+}
+
+.modal-overlay.active {
+  display: flex;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  background-color: #841212; /* Rouge Diva */
+  width: 100%;
+  max-width: 900px;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  animation: slideUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px) scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: transform 0.2s ease;
+}
+
+.modal-close:hover {
+  transform: rotate(90deg) scale(1.1);
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: row;
+  min-height: 540px;
+}
+
+/* Côté Photo */
+.modal-photo-side {
+  width: 40%;
+  background-color: #333;
+  position: relative;
+}
+
+.modal-prof-photo-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.modal-prof-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* Côté Infos */
+.modal-info-side {
+  width: 60%;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  color: white;
+}
+
+.modal-prof-name-header {
+  background-color: black;
+  border-radius: 6px;
+  padding: 12px 20px;
+  text-align: center;
+}
+
+.modal-prof-name-header h2 {
+  font-family: "Vogue", sans-serif;
+  font-weight: 100;
+  font-size: 24px;
+  letter-spacing: 3px;
+  color: white;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.modal-styles-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.style-pill {
+  background-color: white;
+  color: black;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-family: "Times New Roman", serif;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.modal-bio-section h3 {
+  font-family: "Vogue", sans-serif;
+  font-weight: 100;
+  font-size: 21px;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.modal-bio-section p {
+  font-family: "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Responsive Modale */
+@media (max-width: 768px) {
+  .modal-body {
+    flex-direction: column;
+  }
+  .modal-photo-side {
+    width: 100%;
+    height: 400px;
+  }
+  .modal-info-side {
+    width: 100%;
+    padding: 30px 20px;
+  }
+}
+
+/* Modale Style (Vertical) */
+.style-modal-content {
+  max-width: 800px;
+}
+
+.style-modal-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.style-modal-photo {
+  width: 100%;
+  height: 350px;
+  background-color: #333;
+}
+
+.style-modal-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.style-modal-info {
+  background-color: #841212;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.style-modal-title-wrapper {
+  background-color: black;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 6px;
+  align-self: flex-start;
+}
+
+.style-modal-title-wrapper h2 {
+  font-family: "Vogue", sans-serif;
+  color: white;
+  margin: 0;
+  font-size: 24px;
+  letter-spacing: 2px;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.style-modal-desc p {
+  font-family: "Times New Roman", serif;
+  color: white;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* =====================
+   RESPONSIVE HEADER / FOOTER
+   ===================== */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: min(280px, 80vw);
+    height: 100vh;
+    background-color: #841212;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.35s ease;
+    z-index: 1000;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.4);
+  }
+
+  nav.open {
+    right: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin-right: 0;
+    gap: 30px;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 0;
+  }
+
+  .header-link {
+    font-size: 22px;
+  }
+
+  /* Footer */
+  .footer-container {
+    flex-direction: column;
+    gap: 35px;
+    padding: 30px 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo {
+    height: 140px;
+  }
+
+  /* Filtres planning : s'empiler en colonne */
+  .planning-filters {
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .filter-select {
+    width: 100%;
+    min-width: unset;
+  }
+}

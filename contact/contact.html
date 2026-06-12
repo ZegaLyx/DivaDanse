@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Diva Danse</title>
+    <link rel="stylesheet" href="contact.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/Images/Logo/Logo_transparent/3.webp"
+    />
+  </head>
+  <body>
+    <!-- header du site, avec le logo et le menu de navigation -->
+    <div class="header-container">
+      <a href="/index.html"
+        ><img
+          class="header-logo"
+          src="/Images/Logo/Logo_transparent/2.webp"
+          alt="Le logo du site"
+      /></a>
+      <button
+        class="hamburger"
+        id="hamburger"
+        aria-label="Menu"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav">
+        <ul>
+          <li><a class="header-link" href="/cours/cours.html">Cours</a></li>
+          <li><a class="header-link" href="/tarifs/tarifs.html">Tarifs</a></li>
+          <li>
+            <a class="header-link" href="/studios/studios.html">Studios</a>
+          </li>
+          <li>
+            <a class="header-link" href="/actualites/actualites.html"
+              >Actualités</a
+            >
+          </li>
+          <li>
+            <a class="header-link" href="/contact/contact.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- bloc principal de la page contact, avec les infos et la carte -->
+    <div class="main-container">
+      <h1 class="main-title">Contact</h1>
+
+      <div class="section-contact-container">
+        <!-- ici on met la newsletter et les coordonnées, un peu comme une fiche de contact -->
+        <div class="newsletter-container">
+          <h2 class="newsletter-title">Newsletter</h2>
+          <div class="line-newsletter"></div>
+          <p class="newsletter-content">
+            Restez informé(e) de nos dernières actualités et évènements !
+          </p>
+          <button class="newsletter-btn">
+            <a
+              href="https://ec51f17d.sibforms.com/serve/MUIFALT0dpeK_U7rES9x97Krw9gs_B04-rxxrAv7Zs50SXUx744XlSQyld7cQe9AZYWAxtF0JgGzyrquSonHEAJiJgY5aNLscvVBSMFkzSHc3P2eALm1N-QTW1NgzM5lHPvYuecQe3AuwQp61LCbIW5bYTwhcSym8ARrTel_AnjR22HkoxctOTWOjXz2WWdAQw5YqToNmCjdreZCRA== "
+              target="_blank"
+              >S'inscrire à notre newsletter</a
+            >
+          </button>
+        </div>
+
+        <div class="coordonnees-container">
+          <h2 class="coordonnees-title">Nos coordonnées</h2>
+          <div class="line-coordonnees"></div>
+          <div class="email-container">
+            <h3 class="email-title">Email</h3>
+            <p class="email-content">
+              <a href="mailto:ecoledivadanse@gmail.com"
+                >ecoledivadanse@gmail.com</a
+              >
+            </p>
+          </div>
+
+          <div class="adresse-container">
+            <h3 class="adresse-title">Adresse</h3>
+            <p class="adresse-content">
+              137 rue Claude Balbastre Bat 1C ( dans le parc d'activité )<br />34070
+              Montpellier
+            </p>
+          </div>
+
+          <div class="reseaux-container">
+            <h2 class="reseaux-title">Réseaux sociaux</h2>
+            <ul class="reseaux-content">
+              <li id="instagram-coordonnees">
+                <a href="https://instagram.com/divadanse/"
+                  ><img
+                    src="/Images/Réseaux/logo-instagram.webp"
+                    alt="Logo Instagram"
+                    class="logo-reseaux-coordonnees"
+                    id="img-instagram-coordonnees"
+                /></a>
+              </li>
+              <li id="tiktok-coordonnees">
+                <a
+                  href="https://tiktok.com/@diva.danse34?_t=ZN-8zrYoWRZosY&_r=1"
+                  ><img
+                    src="/Images/Réseaux/logo-tiktok.webp"
+                    alt="Logo TikTok"
+                    class="logo-reseaux-coordonnees"
+                    id="img-tiktok-coordonnees"
+                /></a>
+              </li>
+              <li id="linkedin-coordonnees">
+                <a href="https://linkedin.com/in/divadanse"
+                  ><img
+                    src="/Images/Réseaux/logo-linkedin.webp"
+                    alt="Logo LinkedIn"
+                    class="logo-reseaux-coordonnees"
+                    id="img-linkedin-coordonnees"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-2">
+        <div class="section-2-left">
+          <div class="map-header">
+            <h2 class="map-title">Nous trouver</h2>
+            <div class="line-map"></div>
+          </div>
+
+          <div class="map-card">
+            <div
+              id="contact-map"
+              aria-label="Carte de localisation de l'école Diva Danse"
+            ></div>
+          </div>
+        </div>
+
+        <div class="section-2-right">
+          <div class="horaire-header">
+            <h2 class="horaire-title">Horaires</h2>
+            <div class="line-horaire"></div>
+          </div>
+
+          <div class="card-horaire">
+            <div class="horaire-card-custom">
+              <div class="horaire-row">
+                <span class="jour">Lundi</span
+                ><span class="horaire">18h30 - 21h30</span>
+              </div>
+              <div class="horaire-divider"></div>
+              <div class="horaire-row">
+                <span class="jour">Mardi</span
+                ><span class="horaire">18h30 - 21h30</span>
+              </div>
+              <div class="horaire-divider"></div>
+              <div class="horaire-row">
+                <span class="jour">Mercredi</span
+                ><span class="horaire">18h30 - 21h30</span>
+              </div>
+              <div class="horaire-divider"></div>
+              <div class="horaire-row">
+                <span class="jour">Jeudi</span
+                ><span class="horaire">18h00 - 22h00</span>
+              </div>
+              <div class="horaire-divider"></div>
+              <div class="horaire-row">
+                <span class="jour">Vendredi</span
+                ><span class="ferme">Fermé</span>
+              </div>
+              <div class="horaire-divider"></div>
+              <div class="horaire-row">
+                <span class="jour">Samedi</span><span class="ferme">Fermé</span>
+              </div>
+              <div class="horaire-divider"></div>
+              <div class="horaire-row">
+                <span class="jour">Dimanche</span
+                ><span class="ferme">Fermé</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="line-footer"></div>
+
+    <div class="footer-container">
+      <div class="section-reseaux">
+        <ul class="reseaux-list">
+          <li id="instagram">
+            <a href="https://instagram.com/divadanse/" target="_blank"
+              ><img
+                src="/Images/Réseaux/logo-instagram.webp"
+                alt="Logo Instagram"
+                class="logo-reseaux"
+                id="img-instagram"
+            /></a>
+          </li>
+          <li id="tiktok">
+            <a
+              href="https://tiktok.com/@diva.danse34?_t=ZN-8zrYoWRZosY&_r=1"
+              target="_blank"
+              ><img
+                src="/Images/Réseaux/logo-tiktok.webp"
+                alt="Logo TikTok"
+                class="logo-reseaux"
+                id="img-tiktok"
+            /></a>
+          </li>
+          <li id="linkedin">
+            <a href="https://linkedin.com/in/divadanse" target="_blank"
+              ><img
+                src="/Images/Réseaux/logo-linkedin.webp"
+                alt="Logo LinkedIn"
+                class="logo-reseaux"
+                id="img-linkedin"
+            /></a>
+          </li>
+        </ul>
+        <button class="newsletter-btn">
+          <a
+            href="https://ec51f17d.sibforms.com/serve/MUIFALT0dpeK_U7rES9x97Krw9gs_B04-rxxrAv7Zs50SXUx744XlSQyld7cQe9AZYWAxtF0JgGzyrquSonHEAJiJgY5aNLscvVBSMFkzSHc3P2eALm1N-QTW1NgzM5lHPvYuecQe3AuwQp61LCbIW5bYTwhcSym8ARrTel_AnjR22HkoxctOTWOjXz2WWdAQw5YqToNmCjdreZCRA== "
+            target="_blank"
+            >S'inscrire à notre newsletter</a
+          >
+        </button>
+      </div>
+
+      <div class="section-adresses">
+        <a href="mailto:ecoledivadanse@gmail.com" class="adresse-link"
+          ><h3 class="adresse-mail-diva">ecoledivadanse@gmail.com</h3></a
+        >
+        <h3 class="adresse-physique">
+          Diva Danse 137 rue Claude Balbastre Montpellier
+        </h3>
+      </div>
+
+      <div class="logo-section">
+        <img
+          class="footer-logo"
+          src="/Images/Logo/Logo_transparent/4.png"
+          alt="Logo du site"
+        />
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="contact.js"></script>
+  </body>
+</html>
