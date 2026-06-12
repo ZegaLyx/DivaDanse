@@ -1,0 +1,98 @@
+[
+  {
+    "id": "street jazz",
+    "name": "STREET JAZZ",
+    "desc": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "img": "/Images/Styles/Styles_popup/street-jazz.png"
+  },
+  {
+    "id": "lyrical",
+    "name": "LYRICAL",
+    "desc": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "img": "/Images/Styles/Styles_popup/lyrical.png"
+  },
+  {
+    "id": "sensuel contempo",
+    "name": "SENSUAL CONTEMPO",
+    "desc": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "img": "/Images/Styles/Styles_popup/sensual-contempo.png"
+  },
+  {
+    "id": "heels",
+    "name": "HEELS",
+    "desc": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "img": "/Images/Styles/Styles_popup/heels.png"
+  },
+  {
+    "id": "waacking",
+    "name": "WAACKING",
+    "desc": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "img": "/Images/Styles/Styles_popup/waacking.png"
+  },
+  {
+    "id": "commercial girly",
+    "name": "COMMERCIAL GIRLY",
+    "desc": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "img": "/Images/Styles/Styles_popup/commercial-girly.png"
+  },
+  {
+    "id": "dance hall",
+    "name": "DANCE HALL",
+    "desc": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "img": "/Images/Styles/Styles_popup/dancehall-gyal.png"
+  },
+  {
+    "id": "floor work",
+    "name": "FLOOR WORK",
+    "desc": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "img": "/Images/Styles/Styles_popup/floorwork.png"
+  },
+  {
+    "id": "reggaeton",
+    "name": "REGGAETON",
+    "desc": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "img": "/Images/Styles/Styles_popup/reggaeton.png"
+  },
+  {
+    "id": "twerk",
+    "name": "TWERK",
+    "desc": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "img": "/Images/Styles/Styles_popup/twerk.png"
+  },
+  {
+    "id": "modern jazz",
+    "name": "MODERN JAZZ",
+    "desc": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "img": "/Images/Styles/Styles_popup/modern-jazz.png"
+  },
+  {
+    "id": "broadway jazz",
+    "name": "BROADWAY JAZZ",
+    "desc": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "img": "/Images/Styles/Styles_popup/broadway-jazz.png"
+  },
+  {
+    "id": "jazz sensuel",
+    "name": "JAZZ SENSUEL",
+    "desc": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "img": "/Images/Styles/Styles_popup/jazz-sensuel.png"
+  },
+  {
+    "id": "heels cabaret",
+    "name": "HEELS CABARET",
+    "desc": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "img": "/Images/Styles/Styles_popup/heels.png"
+  },
+  {
+    "id": "heels escarpins",
+    "name": "HEELS ESCARPINS",
+    "desc": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "img": "/Images/Styles/Styles_popup/heels.png"
+  },
+  {
+    "id": "commercial",
+    "name": "COMMERCIAL",
+    "desc": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "img": "/Images/Styles/Styles_popup/commercial.png"
+  }
+]
