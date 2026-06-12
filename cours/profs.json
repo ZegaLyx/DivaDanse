@@ -4,8 +4,8 @@
     "name": "MAEVA",
     "styles": ["Lyrical", "Sensuel Contempo", "Heels"],
     "bio": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "img": "/Images/Profs/Maëva.png",
-    "profil": "/Images/Profs/Profs-profils/Maëva-profil.png"
+    "img": "/Images/Profs/Maeva.png",
+    "profil": "/Images/Profs/Profs-profils/Maeva-profil.png"
   },
   {
     "id": "laurence",
@@ -20,8 +20,8 @@
     "name": "MAGDALENA",
     "styles": ["Heels Inter", "Heels Avancé"],
     "bio": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "img": "/Images/Profs/Magdaléna.png",
-    "profil": "/Images/Profs/Profs-profils/Magdaléna-profil.png"
+    "img": "/Images/Profs/Magdalena.png",
+    "profil": "/Images/Profs/Profs-profils/Magdalena-profil.png"
   },
   {
     "id": "mister k",
