@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Studios - Diva Danse</title>
+    <link rel="stylesheet" href="studios.css" />
+    <link
+      rel="icon"
+      type="/image/png"
+      href="/Images/Logo/Logo_transparent/3.webp"
+    />
+  </head>
+  <body>
+    <!-- header du site, avec le logo et les liens de navigation -->
+    <div class="header-container">
+      <a href="/index.html"
+        ><img
+          class="header-logo"
+          src="/Images/Logo/Logo_transparent/2.webp"
+          alt="Le logo du site"
+      /></a>
+      <button
+        class="hamburger"
+        id="hamburger"
+        aria-label="Menu"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav">
+        <ul>
+          <li><a class="header-link" href="/cours/cours.html">Cours</a></li>
+          <li><a class="header-link" href="/tarifs/tarifs.html">Tarifs</a></li>
+          <li>
+            <a class="header-link" href="/studios/studios.html">Studios</a>
+          </li>
+          <li>
+            <a class="header-link" href="/actualites/actualites.html"
+              >Actualités</a
+            >
+          </li>
+          <li>
+            <a class="header-link" href="/contact/contact.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- ici j'ai mis le contenu principal avec les deux studios et leurs infos -->
+    <div class="main">
+      <h1 class="main-title">Locations des studios</h1>
+
+      <!-- premier studio, avec les photos et les infos techniques -->
+      <div class="studio1-section">
+        <h2 class="studio1-title">Studio 1</h2>
+        <div class="line-studio1"></div>
+
+        <div class="photos">
+          <div id="photo1-studio1">
+            <img
+              class="studio-photo"
+              src="/Images/Studios/Studio_bas/1.jpeg"
+              alt="Grande image du studio 1"
+            />
+          </div>
+          <div id="photo2-studio1">
+            <img
+              class="studio-photo"
+              src="/Images/Studios/Studio_bas/2.jpeg"
+              alt="Image du studio 1"
+            />
+          </div>
+          <div id="photo3-studio1">
+            <img
+              class="studio-photo"
+              src="/Images/Studios/Studio_bas/3.jpeg"
+              alt="Image du studio 1"
+            />
+          </div>
+          <div id="photo4-studio1">
+            <img
+              class="studio-photo"
+              src="/Images/Studios/Studio_bas/4.jpeg"
+              alt="Image du studio 1"
+            />
+          </div>
+          <div id="photo5-studio1">
+            <img
+              class="studio-photo"
+              src="/Images/Studios/Studio_bas/5.jpeg"
+              alt="Image du studio 1"
+            />
+          </div>
+        </div>
+
+        <!-- Section infos: restructurée en 4 colonnes
+             col1 = labels (gauche), col2 = valeurs, col3 = labels (droite), col4 = valeurs -->
+        <div class="infos-container">
+          <div class="infos-grid">
+            <!-- première colonne: labels gauche -->
+            <ul class="col labels-col">
+              <li>Surface:</li>
+              <li>Emplacement:</li>
+              <li>Sol:</li>
+              <li>Accueil:</li>
+              <li>Hauteur plafond:</li>
+            </ul>
+
+            <!-- deuxième colonne: valeurs gauche -->
+            <ul class="col values-col">
+              <li><span class="value">80m²</span></li>
+              <li><span class="value">Rez-de-chaussée</span></li>
+              <li><span class="value">Plancher neuf</span></li>
+              <li><span class="value">10m² dispo</span></li>
+              <li><span class="value">4m</span></li>
+            </ul>
+
+            <!-- troisième colonne: labels droite -->
+            <ul class="col labels-col">
+              <li>Miroirs:</li>
+              <li>Lumière du jour:</li>
+              <li>Système son:</li>
+              <li>Confort thermique:</li>
+              <li>Wifi:</li>
+            </ul>
+
+            <!-- quatrième colonne: valeurs droite -->
+            <ul class="col values-col">
+              <li><span class="value">10m</span></li>
+              <li><span class="value">Occultable</span></li>
+              <li><span class="value">Inclus</span></li>
+              <li><span class="value">Chauffage / Clim</span></li>
+              <li><span class="value">Inclus</span></li>
+            </ul>
+          </div>
+          <button class="CTA-studio">
+            <a href="/contact/contact.html">Nous contacter</a>
+          </button>
+        </div>
+      </div>
+
+      <!-- deuxième studio, pareil mais avec un style un peu différent -->
+      <div class="studio-section studio2-section">
+        <h2 class="studio-title">Studio 2</h2>
+        <div class="line-studio"></div>
+
+        <div class="photos photos-dark">
+          <div id="photo1-studio2">
+            <img
+              class="studio-photo"
+              src="/Images/Studios/Studio_haut/1.jpeg"
+              alt="Grande image du studio 2"
+            />
+          </div>
+          <div id="photo2-studio2">
+            <img
+              class="studio-photo"
+              src="/Images/Studios/Studio_haut/2.jpeg"
+              alt="Image du studio 2"
+            />
+          </div>
+          <div id="photo3-studio2">
+            <img
+              class="studio-photo"
+              src="/Images/Studios/Studio_haut/3.jpeg"
+              alt="Image du studio 2"
+            />
+          </div>
+          <div id="photo4-studio2">
+            <img
+              class="studio-photo"
+              src="/Images/Studios/Studio_haut/4.jpeg"
+              alt="Image du studio 2"
+            />
+          </div>
+          <div id="photo5-studio2">
+            <img
+              class="studio-photo"
+              src="/Images/Studios/Studio_haut/5.jpeg"
+              alt="Image du studio 2"
+            />
+          </div>
+        </div>
+
+        <div class="infos-container">
+          <div class="infos-grid inverse">
+            <ul class="col labels-col">
+              <li>Surface:</li>
+              <li>Emplacement:</li>
+              <li>Sol:</li>
+              <li>Accueil:</li>
+              <li>Hauteur plafond:</li>
+            </ul>
+            <ul class="col values-col">
+              <li><span class="value">80m²</span></li>
+              <li><span class="value">Rez-de-chaussée</span></li>
+              <li><span class="value">Plancher neuf</span></li>
+              <li><span class="value">10m² dispo</span></li>
+              <li><span class="value">4m</span></li>
+            </ul>
+            <ul class="col labels-col">
+              <li>Miroirs:</li>
+              <li>Lumière du jour:</li>
+              <li>Système son:</li>
+              <li>Confort thermique:</li>
+              <li>Wifi:</li>
+            </ul>
+            <ul class="col values-col">
+              <li><span class="value">10m</span></li>
+              <li><span class="value">Occultable</span></li>
+              <li><span class="value">Inclus</span></li>
+              <li><span class="value">Chauffage / Clim</span></li>
+              <li><span class="value">Inclus</span></li>
+            </ul>
+          </div>
+          <button class="CTA-studio inverse">
+            <a href="/contact/contact.html">Nous contacter</a>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="line-footer"></div>
+
+    <!-- footer avec les réseaux et l'adresse, comme partout sur le site -->
+    <div class="footer-container">
+      <div class="section-reseaux">
+        <ul class="reseaux-list">
+          <li id="instagram">
+            <a href="https://instagram.com/divadanse/" target="_blank"
+              ><img
+                src="/Images/Réseaux/logo-instagram.webp"
+                alt="Logo Instagram"
+                class="logo-reseaux"
+                id="img-instagram"
+            /></a>
+          </li>
+          <li id="tiktok">
+            <a
+              href="https://tiktok.com/@diva.danse34?_t=ZN-8zrYoWRZosY&_r=1"
+              target="_blank"
+              ><img
+                src="/Images/Réseaux/logo-tiktok.webp"
+                alt="Logo TikTok"
+                class="logo-reseaux"
+                id="img-tiktok"
+            /></a>
+          </li>
+          <li id="linkedin">
+            <a href="https://linkedin.com/in/divadanse" target="_blank"
+              ><img
+                src="/Images/Réseaux/logo-linkedin.webp"
+                alt="Logo LinkedIn"
+                class="logo-reseaux"
+                id="img-linkedin"
+            /></a>
+          </li>
+        </ul>
+        <button class="newsletter-btn">
+          <a
+            href="https://ec51f17d.sibforms.com/serve/MUIFALT0dpeK_U7rES9x97Krw9gs_B04-rxxrAv7Zs50SXUx744XlSQyld7cQe9AZYWAxtF0JgGzyrquSonHEAJiJgY5aNLscvVBSMFkzSHc3P2eALm1N-QTW1NgzM5lHPvYuecQe3AuwQp61LCbIW5bYTwhcSym8ARrTel_AnjR22HkoxctOTWOjXz2WWdAQw5YqToNmCjdreZCRA== "
+            target="_blank"
+            >S'inscrire à notre newsletter</a
+          >
+        </button>
+      </div>
+
+      <div class="section-adresses">
+        <a href="mailto:ecoledivadanse@gmail.com" class="adresse-link"
+          ><h3 class="adresse-mail-diva">ecoledivadanse@gmail.com</h3></a
+        >
+        <h3 class="adresse-physique">
+          Diva Danse 137 rue Claude Balbastre Montpellier
+        </h3>
+      </div>
+
+      <div class="logo-section">
+        <img
+          class="footer-logo"
+          src="/Images/Logo/Logo_transparent/4.png"
+          alt="Logo du site"
+        />
+      </div>
+    </div>
+    <script>
+      // petit script pour faire fonctionner le menu hamburger sur cette page
+      (function () {
+        var hamburger = document.getElementById("hamburger");
+        var nav = document.getElementById("nav");
+        if (!hamburger || !nav) return;
+        hamburger.addEventListener("click", function () {
+          hamburger.classList.toggle("active");
+          nav.classList.toggle("open");
+          hamburger.setAttribute(
+            "aria-expanded",
+            hamburger.classList.contains("active"),
+          );
+        });
+        nav.querySelectorAll(".header-link").forEach(function (link) {
+          link.addEventListener("click", function () {
+            hamburger.classList.remove("active");
+            nav.classList.remove("open");
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

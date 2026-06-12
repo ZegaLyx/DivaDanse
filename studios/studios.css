@@ -1,0 +1,605 @@
+/* reset global : marge, padding et box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* petit reset de base, ça évite les trucs bizarres */
+
+/* pour importer les polices */
+@font-face {
+  font-family: "GuthenBloots";
+  src: url("../Fonts/guthen_bloots/Guthen Bloots Personal Use.ttf")
+    format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Vogue";
+  src: url("../Fonts/vogue/Vogue.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* header : logo + menu */
+/* header du site, avec le logo et le menu */
+.header-container {
+  background-color: #841212;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  font-family: "Vogue", sans-serif;
+  font-weight: 100;
+  color: white;
+  text-decoration: none;
+  margin-right: 30px;
+  gap: 20px;
+}
+
+li {
+  list-style: none;
+  margin: 0 20px;
+}
+
+.header-link {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.header-logo {
+  height: 100px;
+  margin-right: 0;
+}
+
+/* ===== HAMBURGER ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 1001;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* zone principale de la page */
+/* section principale où les studios sont affichés */
+.main {
+  background-color: black;
+  color: white;
+}
+
+.main-title {
+  font-family: "vogue", sans-serif;
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: 100;
+  padding: 30px 15px 15px 15px;
+  margin-bottom: 30px;
+  letter-spacing: 6px;
+}
+
+.studio1-section {
+  display: flex;
+  flex-direction: column;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 40px;
+}
+
+.studio-title {
+  margin-top: 40px;
+  color: black;
+}
+
+.line-studio1,
+.line-studio {
+  width: 100%;
+  height: 1px;
+  background-color: #ffffff50;
+  margin-top: 10px;
+}
+
+.line-studio {
+  background-color: #00000080;
+}
+
+/* grille des photos du studio, un peu comme une petite mosaïque */
+.photos {
+  display: grid;
+  gap: 20px;
+  margin-top: 40px;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 350px; /* total height — big photo will span both rows */
+  align-items: stretch;
+  margin-bottom: 50px;
+}
+
+.photos-dark {
+  margin-top: 40px;
+}
+
+#photo1-studio1 {
+  grid-column: 1 / 2; /* pour qu'elle prenne la moitié de la largeur */
+  grid-row: 1 / 3; /* pour qu'elle prenne toute la hauteur */
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #ffffff80; /* couleur de fond semi-transparente */
+}
+
+#photo2-studio1 {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #ffffff80; /* couleur de fond semi-transparente */
+}
+
+#photo3-studio1 {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #ffffff80; /* couleur de fond semi-transparente */
+}
+
+#photo4-studio1 {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #ffffff80; /* couleur de fond semi-transparente */
+}
+
+#photo5-studio1 {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #ffffff80; /* couleur de fond semi-transparente */
+}
+
+#photo1-studio2 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #111111; /* inversion des couleurs */
+}
+
+#photo2-studio2 {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #111111;
+}
+
+#photo3-studio2 {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #111111;
+}
+
+#photo4-studio2 {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #111111;
+}
+
+#photo5-studio2 {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #111111;
+}
+
+.studio-photo {
+  /* pour que la photo fit dans la div */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ----- Section infos : 4 colonnes ----- */
+/* structure : labels | valeurs | labels | valeurs */
+/* bloc avec toutes les infos techniques du studio */
+.infos-container {
+  margin-top: 20px;
+}
+
+.infos-grid {
+  /* carte blanche contenant les 4 colonnes */
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto; /* label/value | label/value */
+  gap: 18px;
+  background: #ffffff;
+  color: #111;
+  padding: 22px;
+  padding-bottom: 30px;
+  border: 2px solid #841212;
+  border-radius: 10px;
+  align-items: start;
+}
+
+.infos-grid.inverse {
+  background: #111;
+  color: #fff;
+}
+
+.infos-grid.inverse .labels-col li {
+  color: #fff;
+}
+
+.infos-grid.inverse .values-col .value {
+  background: #fff;
+  color: #111;
+}
+
+.infos-grid.inverse .col:nth-child(3) {
+  border-left-color: #84121290;
+}
+
+/* chaque colonne est une liste verticale */
+.infos-grid .col {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Alignement des lignes : même hauteur pour chaque ligne afin que
+   les labels et les valeurs soient bien alignés horizontalement */
+.infos-grid .col li {
+  min-height: 40px;
+  display: flex;
+  align-items: start;
+}
+
+/* Les labels sont alignés à droite pour coller visuellement
+   vers la séparation centrale */
+.labels-col {
+  padding-right: 20px;
+  text-align: left;
+}
+
+/* Valeurs alignées à gauche */
+.col.values-col {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+/* Trait vertical au milieu : on le place sur la 3ème colonne (labels droite)
+   pour séparer gauche / droite */
+.infos-grid .col:nth-child(3) {
+  border-left: 2px solid #84121290;
+  padding-left: 20px;
+}
+
+/* labels simples en texte noir */
+.labels-col li {
+  color: #111;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* valeurs = pastilles noires */
+.values-col li {
+  display: flex;
+  align-items: center;
+}
+.values-col .value {
+  background: #111;
+  color: #fff;
+  padding: 10px 16px;
+  font-family: "vogue", sans-serif;
+  font-weight: 100;
+  border-radius: 5px;
+  font-size: 18px;
+  white-space: nowrap;
+  width: 190px; /* largeur fixe identique pour toutes les valeurs */
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.CTA-studio {
+  background-color: #841212;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 50px;
+  margin-top: -25px;
+  display: flex;
+  justify-self: center;
+}
+
+.studio2-section {
+  width: 100%;
+  background-color: white;
+  padding: 40px;
+}
+
+.line-footer {
+  display: flex;
+  justify-self: center;
+  width: 95%;
+  height: 1px;
+  background-color: #00000080;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 200px;
+  padding: 50px;
+}
+
+.reseaux-list {
+  display: flex;
+  gap: 20px;
+}
+
+.logo-reseaux {
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+}
+
+#tiktok {
+  background-color: black;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  padding-top: 5px;
+  margin: 0;
+}
+
+#img-tiktok {
+  height: 100px;
+  width: 100px;
+}
+
+#instagram {
+  background-color: #e1306c;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  padding-top: 5px;
+  margin: 0;
+}
+
+#linkedin {
+  background-color: #0077b5;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.newsletter-btn {
+  background-color: #841212;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+  color: white;
+  border: none;
+  padding: 20px 30px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50px;
+  margin-top: 30px;
+}
+
+.section-adresses {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.adresse-link {
+  text-decoration: none;
+  color: black;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo {
+  height: 200px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .footer-container {
+    gap: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Header hamburger */
+  .hamburger {
+    display: flex;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: min(280px, 80vw);
+    height: 100vh;
+    background-color: #841212;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.35s ease;
+    z-index: 1000;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.4);
+  }
+
+  nav.open {
+    right: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin-right: 0;
+    gap: 30px;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 0;
+  }
+
+  .header-link {
+    font-size: 22px;
+  }
+
+  /* Titre page */
+  .main-title {
+    font-size: 28px;
+    letter-spacing: 3px;
+  }
+
+  /* Photo grid : colonne simple */
+  .photos,
+  .photos-dark {
+    grid-template-columns: 1fr;
+    grid-template-rows: unset;
+    height: auto;
+    gap: 20px;
+    margin: 20px;
+  }
+
+  #photo1-studio1,
+  #photo2-studio1,
+  #photo3-studio1,
+  #photo4-studio1,
+  #photo5-studio1,
+  #photo1-studio2,
+  #photo2-studio2,
+  #photo3-studio2,
+  #photo4-studio2,
+  #photo5-studio2 {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    height: 200px;
+  }
+
+  /* Infos grid */
+  .infos-grid {
+    grid-template-columns: auto 1fr;
+    gap: 12px;
+  }
+
+  .values-col .value {
+    white-space: normal;
+    width: 100%;
+  }
+
+  .infos-grid .col:nth-child(3) {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .infos-grid .col:nth-child(3),
+  .infos-grid .col:nth-child(4) {
+    border-top: 2px solid #84121290;
+    padding-top: 12px;
+  }
+
+  /* Sections padding */
+  .studio1-section,
+  .studio2-section {
+    padding: 25px 18px;
+  }
+
+  /* Footer */
+  .footer-container {
+    flex-direction: column;
+    gap: 35px;
+    padding: 30px 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo {
+    height: 140px;
+  }
+}

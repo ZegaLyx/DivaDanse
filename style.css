@@ -1,0 +1,442 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* reset de base, sinon les marges font n'importe quoi */
+
+/* pour importer les polices */
+@font-face {
+  font-family: "GuthenBloots";
+  src: url("../Fonts/guthen_bloots/Guthen Bloots Personal Use.ttf")
+    format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Vogue";
+  src: url("../Fonts/vogue/Vogue.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* header en haut, avec le logo et le menu */
+.header-container {
+  background-color: #841212;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  font-family: "Vogue", sans-serif;
+  color: white;
+  text-decoration: none;
+  margin-right: 30px;
+  gap: 20px;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+  margin: 0 20px;
+}
+
+.header-link {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.header-logo {
+  height: 100px;
+  margin-right: 0;
+}
+
+/* =====================
+   HAMBURGER MENU
+   ===================== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 1001;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* partie d'accueil avec le gros logo et les boutons */
+.hero {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-hero {
+  height: 400px;
+  margin: 80px 0 50px 0;
+}
+
+.CTA {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 18%;
+}
+
+.cta-btn {
+  background-color: #841212;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50px;
+  margin-bottom: 80px;
+}
+
+#studios-btn {
+  padding: 0 70px;
+}
+
+.hero-title {
+  font-family: "GuthenBloots", sans-serif;
+  font-weight: 100;
+  color: white;
+  font-size: 35px;
+  margin-bottom: 50px;
+}
+
+/* section histoire, un peu de texte pour présenter l'école */
+.histoire-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 50px 0;
+}
+
+.histoire-title {
+  font-family: "Vogue", sans-serif;
+  font-weight: 100;
+  font-size: 30px;
+}
+
+.histoire-content {
+  width: 75%;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* bloc actualité sur la page d'accueil */
+.actu-container {
+  background-color: #841212;
+  color: white;
+  display: flex;
+  gap: 50px;
+  padding: 50px 150px;
+  justify-content: center;
+}
+
+.actu-img {
+  height: 300px;
+  border-radius: 10px;
+}
+
+.actu-infos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.actu-title {
+  font-family: "Vogue", sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.actu-content {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* footer avec les liens réseaux et les coordonnées */
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 200px;
+  padding: 50px;
+}
+
+.reseaux-list {
+  display: flex;
+  gap: 20px;
+}
+
+.logo-reseaux {
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+}
+
+#tiktok {
+  background-color: black;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  padding-top: 5px;
+  margin: 0;
+}
+
+#img-tiktok {
+  height: 100px;
+  width: 100px;
+}
+
+#instagram {
+  background-color: #e1306c;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  padding-top: 5px;
+  margin: 0;
+}
+
+#linkedin {
+  background-color: #0077b5;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.newsletter-btn {
+  background-color: #841212;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+  color: white;
+  border: none;
+  padding: 20px 30px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50px;
+  margin-top: 30px;
+}
+
+.section-adresses {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.adresse-link {
+  text-decoration: none;
+  color: black;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo {
+  height: 200px;
+}
+
+/* =====================
+   RESPONSIVE
+   ===================== */
+
+/* Tablette */
+@media (max-width: 900px) {
+  .footer-container {
+    gap: 60px;
+  }
+
+  .actu-container {
+    padding: 40px 40px;
+  }
+
+  .logo-hero {
+    height: 280px;
+    margin: 50px 0 40px 0;
+  }
+
+  .CTA {
+    gap: 8%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  /* Header : hamburger */
+  .hamburger {
+    display: flex;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: min(280px, 80vw);
+    height: 100vh;
+    background-color: #841212;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.35s ease;
+    z-index: 1000;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.4);
+  }
+
+  nav.open {
+    right: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin-right: 0;
+    gap: 30px;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 0;
+  }
+
+  .header-link {
+    font-size: 22px;
+  }
+
+  /* Hero */
+  .logo-hero {
+    height: 200px;
+    margin: 40px 0 30px 0;
+  }
+
+  .CTA {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .cta-btn {
+    margin-bottom: 0;
+    font-size: 17px;
+    padding: 14px 30px;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 26px;
+    text-align: center;
+    padding: 0 20px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  /* Histoire */
+  .histoire-content {
+    width: 90%;
+    font-size: 16px;
+  }
+
+  /* Actualité */
+  .actu-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    gap: 20px;
+  }
+
+  /* On garde l'image de la section actu à ses dimensions d'origine */
+
+  .actu-content {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  /* Footer */
+  .footer-container {
+    flex-direction: column;
+    gap: 35px;
+    padding: 30px 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .section-adresses {
+    gap: 16px;
+  }
+
+  .adresse-mail-diva,
+  .adresse-physique {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    height: 140px;
+  }
+}

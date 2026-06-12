@@ -1,0 +1,728 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== FONTS ===== */
+@font-face {
+  font-family: "GuthenBloots";
+  src: url("../Fonts/guthen_bloots/Guthen Bloots Personal Use.ttf")
+    format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Vogue";
+  src: url("../Fonts/vogue/Vogue.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+body {
+  background-color: #fff;
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* ===== HEADER ===== */
+/* header du site, avec le logo et le menu */
+.header-container {
+  background-color: #841212;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  font-family: "Vogue", sans-serif;
+  font-weight: 100;
+  color: white;
+  text-decoration: none;
+  margin-right: 30px;
+  gap: 20px;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+  margin: 0 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-link {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.header-logo {
+  height: 100px;
+  margin-right: 0;
+}
+
+/* ===== HAMBURGER ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 1001;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ===== PAGE TITLE SECTION ===== */
+/* petite section pour le titre de la page */
+.page-title-section {
+  background-color: black;
+  padding: 50px 0 30px;
+  text-align: center;
+}
+
+.page-title {
+  font-family: "Vogue", sans-serif;
+  font-weight: 100;
+  font-size: 36px;
+  letter-spacing: 6px;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* ===== TARIFS SECTION ===== */
+/* bloc qui contient les différentes offres de tarifs */
+.tarifs-section {
+  padding: 20px 40px 60px;
+  background-color: black;
+}
+
+.section-subtitle {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 12px;
+}
+
+.separator {
+  border: none;
+  border-top: 1px solid #bbb;
+  margin-bottom: 40px;
+}
+
+/* ===== CAROUSEL ===== */
+/* ça permet de faire défiler les cartes de tarifs */
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-viewport {
+  flex: 1;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 30px;
+  transition: transform 0.4s ease;
+  will-change: transform;
+}
+
+/* ===== TARIF CARD ===== */
+.tarif-card {
+  flex: 0 0 280px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(255, 255, 255, 0.35);
+  padding: 30px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  text-align: center;
+}
+
+.card-title {
+  font-family: "Vogue", Times, serif;
+  font-weight: 100;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: black;
+  text-transform: uppercase;
+}
+
+.card-price {
+  background-color: black;
+  color: #fff;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 22px;
+  font-weight: 600;
+  padding: 12px 40px;
+  border-radius: 4px;
+  width: 100%;
+  text-align: center;
+}
+
+.space {
+  height: 20px;
+}
+
+.card-btn {
+  display: block;
+  width: 80%;
+  background-color: #841212;
+  color: #fff;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 15px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: auto;
+  text-align: center;
+  border: none;
+}
+
+.card-btn:hover {
+  background-color: #6b0e0e;
+}
+
+/* ===== CAROUSEL BUTTONS ===== */
+.carousel-btn {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    opacity 0.2s ease;
+  z-index: 2;
+  line-height: 1;
+}
+
+.carousel-btn:hover:not(:disabled) {
+  background-color: #00000070;
+  color: #fff;
+  border: 2px solid #841212;
+}
+
+.carousel-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  border: 2px solid #841212;
+}
+
+.carousel-btn:not(:disabled) {
+  background-color: white;
+  color: black;
+  border: 2px solid #841212;
+}
+
+/* ===== FRAIS NOTE ===== */
+.frais-note {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 15px;
+  color: #ffffff95;
+  margin-top: 40px;
+  font-style: italic;
+}
+
+/* ===== COURS à LA CARTE ===== */
+.carte-section,
+.paiement-section {
+  padding: 20px 40px 60px;
+  background-color: white;
+}
+
+.section-subtitle-carte,
+.section-subtitle-paiement {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 12px;
+}
+
+.separator-carte {
+  border: none;
+  border-top: 1px solid #00000050;
+  margin-bottom: 40px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+  width: 100%;
+}
+
+.carte-card {
+  flex: 0 0 280px;
+  background-color: black;
+  border: 1px solid #00000020;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+  padding: 30px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  text-align: center;
+}
+
+.card-title-carte {
+  font-family: "Vogue", Times, serif;
+  font-weight: 100;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.card-price-carte {
+  background-color: white;
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 22px;
+  font-weight: 600;
+  padding: 12px 40px;
+  border-radius: 4px;
+  width: 100%;
+  text-align: center;
+}
+
+/* ===== TARIFS RÉDUITS ===== */
+.reduits-section {
+  background-color: black;
+  padding: 30px 40px 50px;
+}
+
+.section-subtitle-reduits {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 12px;
+}
+
+.separator-reduits {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  margin-bottom: 36px;
+}
+
+/* Le rectangle principal avec bordure ÉPAISSE */
+.reduits-tableau {
+  display: flex;
+  align-items: stretch;
+  border: 3px solid white; /* bordure externe épaisse */
+  border-radius: 6px;
+  overflow: hidden;
+  min-height: 110px;
+}
+
+/* Chaque colonne */
+.reduits-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 28px;
+  gap: 8px;
+}
+
+/* Séparateurs internes FINS */
+.reduits-divider {
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.5); /* fin, plus discret */
+  flex-shrink: 0;
+  margin: 12px 0; /* petit espace vertical pour ne pas coller au bord */
+}
+
+/* Badge "Tarif réduit" — rectangle avec bordure blanche */
+.reduit-badge {
+  display: inline-block;
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 20px 30px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+/* Description */
+.reduit-desc {
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Prix */
+.reduit-prix {
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.7;
+}
+
+/* Condition */
+.reduit-condition {
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* ===== MOYENS DE PAIEMENT ===== */
+.wrapper-paiement {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10%;
+  width: 100%;
+}
+.paiement-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 280px;
+}
+
+.paiement-card {
+  width: 100%;
+  min-height: 120px;
+  background-color: black;
+  border: 2px solid #841212;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.paiement-image-container {
+  width: 100%;
+  min-height: 220px;
+  height: 220px;
+  background-color: black;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-paiement {
+  max-width: 70%;
+  max-height: 70%;
+  object-fit: contain;
+  display: block;
+}
+
+.paiement-card-text {
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  line-height: 1.5;
+  padding: 0 10px;
+  margin: 0;
+  text-align: center;
+}
+
+/* footer */
+.line-footer {
+  display: flex;
+  justify-self: center;
+  width: 95%;
+  height: 1px;
+  background-color: #00000080;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 200px;
+  padding: 50px;
+}
+
+.reseaux-list {
+  display: flex;
+  gap: 20px;
+}
+
+.logo-reseaux {
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+}
+
+#tiktok {
+  background-color: black;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  padding-top: 5px;
+  margin: 0;
+}
+
+#img-tiktok {
+  height: 100px;
+  width: 100px;
+}
+
+#instagram {
+  background-color: #e1306c;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  padding-top: 5px;
+  margin: 0;
+}
+
+#linkedin {
+  background-color: #0077b5;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.newsletter-btn {
+  background-color: #841212;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+  color: white;
+  border: none;
+  padding: 20px 30px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50px;
+  margin-top: 30px;
+}
+
+.section-adresses {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.adresse-link {
+  text-decoration: none;
+  color: black;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo {
+  height: 200px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .footer-container {
+    gap: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Header hamburger */
+  .hamburger {
+    display: flex;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: min(280px, 80vw);
+    height: 100vh;
+    background-color: #841212;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.35s ease;
+    z-index: 1000;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.4);
+  }
+
+  nav.open {
+    right: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin-right: 0;
+    gap: 30px;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 0;
+  }
+
+  .header-link {
+    font-size: 22px;
+  }
+
+  /* Carousel : on garde la disposition horizontale avec largeur de carte à 280px pour que le JS gère la translation */
+  .carousel-wrapper {
+    gap: 10px;
+  }
+
+  /* Tarifs à la carte */
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .carte-card {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* Tarifs réduits */
+  .reduits-tableau {
+    flex-direction: column;
+    border: none;
+    gap: 12px;
+  }
+
+  .reduits-col {
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 16px 20px;
+  }
+
+  .reduits-divider {
+    display: none;
+  }
+
+  /* Paiement */
+  .wrapper-paiement {
+    gap: 16px;
+  }
+
+  .paiement-card-wrapper {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* Page title */
+  .page-title {
+    font-size: 26px;
+    letter-spacing: 3px;
+  }
+
+  /* sections padding */
+  .tarifs-section,
+  .carte-section,
+  .paiement-section,
+  .reduits-section {
+    padding: 20px 20px 40px;
+  }
+
+  /* Footer */
+  .footer-container {
+    flex-direction: column;
+    gap: 35px;
+    padding: 30px 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo {
+    height: 140px;
+  }
+}
