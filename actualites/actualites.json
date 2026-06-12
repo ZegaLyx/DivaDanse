@@ -1,0 +1,26 @@
+[
+  {
+    "titre": "TITRE DE L'ACTU",
+    "date": "22/03/26",
+    "texte": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sem quam, aliquam ac maximus consequat, rutrum nec nulla.",
+    "image": "/Images/Actus/workshop-high.webp"
+  },
+  {
+    "titre": "TITRE DE L'ACTU",
+    "date": "29/03/26",
+    "texte": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sem quam, aliquam ac maximus consequat, rutrum nec nulla.",
+    "image": "/Images/Actus/workshop-fusion-commercial-high.webp"
+  },
+  {
+    "titre": "TITRE DE L'ACTU",
+    "date": "06/02/26",
+    "texte": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sem quam, aliquam ac maximus consequat, rutrum nec nulla.",
+    "image": "/Images/Actus/diva-danse-high-epcndq.webp"
+  },
+  {
+    "titre": "TITRE DE L'ACTU",
+    "date": "08/02/26",
+    "texte": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sem quam, aliquam ac maximus consequat, rutrum nec nulla.",
+    "image": "/Images/Actus/img_7661-high.webp"
+  }
+]
