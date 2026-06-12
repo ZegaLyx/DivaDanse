@@ -1,0 +1,41 @@
+[
+  {
+    "heure": "18h15-19h30",
+    "lundi_s1": { "cours": "Floorwork heels", "prof": "NOHA", "profId": "noha", "styleId": "floorwork-heels" },
+    "lundi_s2": { "cours": "Heels Initiation", "prof": "MAEVA", "profId": "maeva", "styleId": "heels-initiation" },
+    "mardi_s1": { "cours": "Heels initiation deb", "prof": "MAEVA", "profId": "maeva", "styleId": "heels-initiation-deb" },
+    "mardi_s2": null,
+    "mercredi_s1": { "cours": "Heels technique", "prof": "3 PROFS", "profId": "3-profs", "styleId": "heels-technique", "heure": "18h30-19h30" },
+    "mercredi_s2": { "cours": "Waacking", "prof": "MISTER K", "profId": "mister-k", "styleId": "waacking" },
+    "jeudi_s1": null,
+    "jeudi_s2": { "cours": "Heels cabaret", "prof": "AURORE", "profId": "aurore", "styleId": "heels-cabaret" },
+    "vendredi_s1": { "cours": "Modern jazz deb/inter", "prof": "LAURENCE", "profId": "laurence", "styleId": "modern-jazz" },
+    "vendredi_s2": null
+  },
+  {
+    "heure": "19h30-20h45",
+    "lundi_s1": { "cours": "Twerk", "prof": "NOHA", "profId": "noha", "styleId": "twerk" },
+    "lundi_s2": { "cours": "Lyrical", "prof": "MAEVA", "profId": "maeva", "styleId": "lyrical" },
+    "mardi_s1": { "cours": "Heels débutant", "prof": "MAEVA", "profId": "maeva", "styleId": "heels-debutant" },
+    "mardi_s2": { "cours": "Heels deb/inter", "prof": "MAGDALENA", "profId": "magdalena", "styleId": "heels-deb-inter" },
+    "mercredi_s1": { "cours": "Heels inter/avancé", "prof": "MAGDALENA", "profId": "magdalena", "styleId": "heels-inter-avance" },
+    "mercredi_s2": { "cours": "Commercial girly niveau 1", "prof": "MISTER K", "profId": "mister-k", "styleId": "commercial-girly" },
+    "jeudi_s1": { "cours": "Reggaeton", "prof": "REDLYSA", "profId": "redlysa", "styleId": "reggaeton" },
+    "jeudi_s2": { "cours": "Heels escarpins", "prof": "AURORE", "profId": "aurore", "styleId": "heels-escarpins" },
+    "vendredi_s1": { "cours": "Broadway jazz", "prof": "LAURENCE", "profId": "laurence", "styleId": "broadway-jazz" },
+    "vendredi_s2": null
+  },
+  {
+    "heure": "20h45-22h",
+    "lundi_s1": { "cours": "Commercial", "prof": "THOM", "profId": "thom", "styleId": "commercial" },
+    "lundi_s2": { "cours": "Sensual contempo niveau 2", "prof": "MAEVA", "profId": "maeva", "styleId": "sensual-contempo" },
+    "mardi_s1": { "cours": "Sensual contempo niveau 1", "prof": "MAEVA", "profId": "maeva", "styleId": "sensual-contempo" },
+    "mardi_s2": { "cours": "Heels inter", "prof": "MAGDALENA", "profId": "magdalena", "styleId": "heels-inter" },
+    "mercredi_s1": null,
+    "mercredi_s2": { "cours": "Commercial girly niveau 2", "prof": "MISTER K", "profId": "mister-k", "styleId": "commercial-girly" },
+    "jeudi_s1": { "cours": "Dancehall gyal", "prof": "REDLYSA", "profId": "redlysa", "styleId": "dancehall-gyal" },
+    "jeudi_s2": { "cours": "Jazz sensuel", "prof": "AURORE", "profId": "aurore", "styleId": "jazz-sensuel" },
+    "vendredi_s1": { "cours": "Street jazz", "prof": "LAURENCE", "profId": "laurence", "styleId": "street-jazz" },
+    "vendredi_s2": null
+  }
+]
