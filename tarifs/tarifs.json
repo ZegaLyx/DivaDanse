@@ -1,0 +1,22 @@
+{
+  "lien_inscription": "https://ulvlup.com/shop/diva-danse?seasonId=7d9b7bbb-b3db-4c88-bc42-a87e7f47682e",
+  "frais_inscription": 20,
+  "abonnements": [
+    { "label": "1 COURS/SEMAINE", "prix": 300 },
+    { "label": "2 COURS/SEMAINE", "prix": 400 },
+    { "label": "3 COURS/SEMAINE", "prix": 500 },
+    { "label": "4 COURS/SEMAINE", "prix": 600 },
+    { "label": "5 COURS/SEMAINE", "prix": 700 },
+    { "label": "Full pass", "prix": 800 }
+  ],
+  "carte": [
+    { "label": "1 COURS", "prix": 20 },
+    { "label": "5 COURS", "prix": 80 },
+    { "label": "10 COURS", "prix": 140 }
+  ],
+  "reduits": [
+    { "label": "1 Cours", "prix": 15 },
+    { "label": "5 Cours", "prix": 60 },
+    { "label": "10 Cours", "prix": 100 }
+  ]
+}
