@@ -1,64 +1,131 @@
-// je récupère la zone où les cartes de tarifs vont défiler
-const track = document.getElementById("carouselTrack");
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
+document.addEventListener("DOMContentLoaded", () => {
 
-const CARD_WIDTH = 280; // largeur carte
-const CARD_GAP = 30; // gap entre cartes
-const STEP = CARD_WIDTH + CARD_GAP;
+  fetch("/tarifs/tarifs.json")
+    .then(r => r.json())
+    .then(data => {
 
-let currentOffset = 0;
+      // =============================================
+      // 1. ABONNEMENTS ANNUELS
+      // =============================================
+      const track = document.getElementById("carouselTrack");
+      if (track) {
+        track.innerHTML = "";
+        data.abonnements.forEach(item => {
+          track.innerHTML += `
+            <div class="tarif-card">
+              <h3 class="card-title">${item.label}</h3>
+              <div class="card-price">${item.prix} &euro;</div>
+              <div class="space"></div>
+              <a href="${data.lien_inscription}" target="_blank" class="card-btn">S'inscrire</a>
+            </div>
+          `;
+        });
+      }
 
-function getMaxOffset() {
-  const totalCards = track.children.length;
-  const visibleCards = Math.floor(track.parentElement.offsetWidth / STEP);
-  return Math.max(0, (totalCards - visibleCards) * STEP);
-}
+      // Frais inscription
+      const fraisNote = document.querySelector(".frais-note");
+      if (fraisNote) {
+        fraisNote.textContent = `Les frais d'inscription de ${data.frais_inscription} € sont dus une seule fois à la première inscription.`;
+      }
 
-// cette fonction met à jour la position des cartes
-function updateCarousel() {
-  track.style.transform = `translateX(-${currentOffset}px)`;
-  prevBtn.disabled = currentOffset <= 0;
-  nextBtn.disabled = currentOffset >= getMaxOffset();
-  prevBtn.style.opacity = prevBtn.disabled ? "0.3" : "1";
-  nextBtn.style.opacity = nextBtn.disabled ? "0.3" : "1";
-}
+      // =============================================
+      // 2. COURS À LA CARTE
+      // =============================================
+      const wrapper = document.querySelector(".wrapper");
+      if (wrapper) {
+        wrapper.innerHTML = "";
+        data.carte.forEach(item => {
+          wrapper.innerHTML += `
+            <div class="carte-card">
+              <h3 class="card-title-carte">${item.label}</h3>
+              <div class="card-price-carte">${item.prix} &euro;</div>
+              <div class="space"></div>
+              <a href="${data.lien_inscription}" target="_blank" class="card-btn">S'inscrire</a>
+            </div>
+          `;
+        });
+      }
 
-prevBtn.addEventListener("click", () => {
-  currentOffset = Math.max(0, currentOffset - STEP);
-  updateCarousel();
-});
+      // =============================================
+      // 3. TARIFS RÉDUITS
+      // =============================================
+      const reduitsCol = document.querySelectorAll(".reduits-col");
+      if (reduitsCol.length >= 3) {
+        const prixCol = reduitsCol[2];
+        prixCol.innerHTML = "";
+        data.reduits.forEach(item => {
+          prixCol.innerHTML += `<p class="reduit-prix">${item.label} &rarr; ${item.prix}&euro;</p>`;
+        });
+      }
 
-nextBtn.addEventListener("click", () => {
-  currentOffset = Math.min(getMaxOffset(), currentOffset + STEP);
-  updateCarousel();
-});
+    })
+    .catch(err => console.error("Erreur chargement tarifs :", err));
 
-window.addEventListener("resize", () => {
-  currentOffset = Math.min(currentOffset, getMaxOffset());
-  updateCarousel();
-});
+  // =============================================
+  // 4. CAROUSEL
+  // =============================================
+  const track = document.getElementById("carouselTrack");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
 
-updateCarousel();
+  let currentIndex = 0;
 
-// HAMBURGER MENU
-// ça ouvre et ferme le menu quand on clique dessus
-(function () {
-  const hamburger = document.getElementById("hamburger");
-  const nav = document.getElementById("nav");
-  if (!hamburger || !nav) return;
-  hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    nav.classList.toggle("open");
-    hamburger.setAttribute(
-      "aria-expanded",
-      hamburger.classList.contains("active"),
-    );
-  });
-  nav.querySelectorAll(".header-link").forEach((link) => {
-    link.addEventListener("click", () => {
-      hamburger.classList.remove("active");
-      nav.classList.remove("open");
+  function getVisibleCards() {
+    const width = window.innerWidth;
+    if (width < 600) return 1;
+    if (width < 900) return 2;
+    return 3;
+  }
+
+  function updateCarousel() {
+    if (!track) return;
+    const cards = track.querySelectorAll(".tarif-card");
+    if (!cards.length) return;
+    const cardWidth = cards[0].offsetWidth + 20;
+    track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateCarousel();
+      }
     });
-  });
-})();
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener("click", () => {
+      if (!track) return;
+      const cards = track.querySelectorAll(".tarif-card");
+      const maxIndex = Math.max(0, cards.length - getVisibleCards());
+      if (currentIndex < maxIndex) {
+        currentIndex++;
+        updateCarousel();
+      }
+    });
+  }
+
+  window.addEventListener("resize", updateCarousel);
+
+  // =============================================
+  // 5. HAMBURGER
+  // =============================================
+  (function () {
+    const hamburger = document.getElementById("hamburger");
+    const nav = document.getElementById("nav");
+    if (!hamburger || !nav) return;
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      nav.classList.toggle("open");
+      hamburger.setAttribute("aria-expanded", hamburger.classList.contains("active"));
+    });
+    nav.querySelectorAll(".header-link").forEach(link => {
+      link.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        nav.classList.remove("open");
+      });
+    });
+  })();
+
+});
